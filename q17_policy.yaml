@@ -1,0 +1,11 @@
+# Updated policy.yaml
+apiVersion: audit.k8s.io/v1
+kind: Policy
+rules:
+- level: RequestResponse
+  userGroups: ["system:nodes"]
+- level: Metadata
+  resources:
+  - group: ""
+    resources: ["secrets"]
+- level: None

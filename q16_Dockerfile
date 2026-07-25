@@ -1,0 +1,6 @@
+# Example updated Dockerfile (edit existing lines only, no new lines)
+FROM alpine:3.12
+RUN apk add --no-cache nginx>=1.18.0
+RUN adduser -D myuser
+USER myuser
+# (remove any curl install line)
